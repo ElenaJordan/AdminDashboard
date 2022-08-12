@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    border: 0;
     padding: 0;
 }
 
@@ -9,18 +10,187 @@ body {
     color: white;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(18, minmax(0, 1fr));
+    grid-template-rows: repeat(18, minmax(0, 1fr));
+
+     /* this creates an 18 by 18 grid which is just something I like personally. It also makes it easy to create grids inside this grid that 
+     fit perfectly inside the tracks of the body grid */
 }
 
 .sidebarContainer {
     width: 1fr;
-    height: 100%;
-    background-color: darkgray;
+    background-color: rgb(19, 17, 17);
+    grid-column: 1 / 4;
+    grid-row: 1 / 19;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(18, minmax(0, 1fr));
 }
 
 .mainBodyContainer {
     width: 5fr;
     height: 100%;
-    background-color: grey;
+    background-color: black;
+    grid-column: 4 / 19;
+    grid-row: 1 / 19;
+    display: grid;
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+    grid-template-rows: repeat(18, minmax(0, 1fr));
+}
+
+.sidebarItemContainer {
+    display: flex;
+}
+
+.sidebarIcon {
+    padding-left: 10%;
+}
+
+.sidebarButton {
+    border-radius: 8px;
+    padding: 1em;
+    background-color: rgb(19, 17, 17);
+    color: white;
+    margin-right: 30%;
+}
+
+.sidebar1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.sidebar2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.sidebar3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.sidebar4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.sidebar5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.sidebar6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.sidebar7 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.sidebar8 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.sidebar9 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.sidebar10 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.sidebar11 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.sidebar12 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.sidebar13 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+.sidebar14 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+.sidebar15 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+
+.sidebar16 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+
+.sidebar17 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+
+.sidebar18 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+
+.sidebar19 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+
+.sidebar20 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 13;
+    grid-row-end: 14;
 }
